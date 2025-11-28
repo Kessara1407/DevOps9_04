@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบฟอร์มลงทะเบียนและรับข้อเสนอแนะ</title>
+
+</head>
+<body>
+
+    <form action="#" method="post" >
+        <h1>แบบฟอร์มลงทะเบียนและรับข้อเสนอแนะ</h1>
+        <p>กรุณากรอกข้อมูลและแสดงความคิดเห็นของคุณ</p>
+        <fieldset>
+            <legend>ข้อมูลส่วนบุคคล</legend>
+            <div >
+                <label for="fullname">ชื่อ-นามสกุล:</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+            <div >
+                <label for="email">อีเมล:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="password">ตั้งรหัสผ่าน:</label>
+                <input type="password" id="password" name="password" minlength="8" required>
+            </div>
+
+            <div >
+                <label for="birthdate">วันเกิด:</label>
+                <input type="date" id="birthdate" name="birthdate">
+            </div>
+
+            <div>
+                <label for="province">จังหวัด:</label>
+                <select id="province" name="province">
+                    <option value="">-- เลือกจังหวัด --</option>
+                    <option value="bkk">กรุงเทพมหานคร</option>
+                    <option value="chiang_mai">เชียงใหม่</option>
+                    <option value="udon">อุดรธานี</option>
+                </select>
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <legend>ความสนใจและไฟล์แนบ</legend>          
+            <div>
+                <label>เพศ:</label>
+                <div >
+                    <input type="radio" id="male" name="gender" value="male" checked>
+                    <label for="male">ชาย</label>
+
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">หญิง</label>
+
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">อื่น ๆ</label>
+                </div>
+            </div>
+
+            <div>
+                <label>ความสนใจ:</label>
+                <div>
+                    <input type="checkbox" id="webdev" name="interest[]" value="webdev">
+                    <label for="webdev">การพัฒนาเว็บไซต์</label>
+
+                    <input type="checkbox" id="design" name="interest[]" value="design">
+                    <label for="design">การออกแบบกราฟิก</label>
+                    
+                    <input type="checkbox" id="data" name="interest[]" value="data">
+                    <label for="data">วิทยาศาสตร์ข้อมูล</label>
+                </div>
+            </div>
+
+            <div>
+                <label for="profile_pic">อัปโหลดรูปภาพ:</label>
+                <input type="file" id="profile_pic" name="profile_pic" accept="image/*">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>ข้อเสนอแนะและการตั้งค่า</legend>               
+            <div>
+                <label for="feedback">ข้อเสนอแนะเพิ่มเติม:</label>
+                <textarea id="feedback" name="feedback" rows="4" placeholder="กรุณาแสดงความคิดเห็นของคุณที่นี่"></textarea>
+            </div>
+        </fieldset>
+
+        <div >
+            <button type="submit">ส่งข้อมูล (Submit)</button>
+            <button type="reset" >ล้างข้อมูล (Reset)</button>
+        </div>
+
+    </form>
+    
+</body>
+</html>
