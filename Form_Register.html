@@ -3,137 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>แบบฟอร์มการลงทะเบียนและรับข้อเสนอแนะ</title>
-
-
+    <title>แบบฟอร์มลงทะเบียนและรับข้อเสนอแนะ</title>
 <style>
-    /* การตั้งค่าพื้นฐาน */
+    /*การตั้งค่าพื้นฐาน*/
     body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f7f6;
-            display: flex; /* ใช้ flexbox เพื่อจัดองค์ประกอบตรงกลาง */
-            justify-content: center ; /* จัดให้อยู่กึ่งกลางแนวนอน */
-            align-items: flex-start; /* จัดให้อยู่ด้านบน */
-            padding: 30px 0;
-            margin : 0;
-            min-height: 100vh;
+        font-family: Arial,sans-serif;
+        background-color: #f6f6f6;
+        display: flex; 
+        justify-content: center;
+        align-items: flex-start;
+        padding: 30px 0;
+        min-height: 100vh;
     }
-
-    /* จัดรูปแบบฟอร์มหลัก */
+    /*การจัดรูปแบบฟอร์มหลัก*/
     .main-form {
-            background-color: #dcedff;
-            padding: 40px;
-            border-radius: 12px; /* ขอบมน */
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            width: 100%;
-            max-width: 800px; /* กำหนดความกว้างสูงสุด */
-            box-sizing: border-box;
+        background-color: #67bae0;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0, 0, 0.1);
+        width: 100%;
+        max-width: 800px;
+        box-sizing:  border-box;
     }
-
-    h1 {
+  h1 {
         color: #1a73e8;
         text-align: center;
         margin-bottom: 5px;
     }
-
     p {
-        text-align: center;
-        color: #555;
-        margin-bottom: 25px;
-    }
-
-    /* การจัดกลุ่มด้วย fieldset และ legend */
-    fieldset {
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        padding: 20px;
-        margin-bottom: 30px;    
-    }
-
-    legend {
-        font-size: 1.2em;
-        font-weight: bold;
-        color: #333;
-        padding: 0 10px;
-    }
-
-    /* การจัดกลุ่มแต่ละชุุดข้อมูล */
-    .form-group {
-        margin-bottom: 15px;   
-        align-content: center;     
-    }
-
-    /* สไตล์สำหรับ Label */
-    label {
-        display: block; /* ทำให้ Label ขึ้นบรรทัดใหม่ */
-        margin-bottom: 5px;
-        font-weight: 600px;
-        color: #333;
-    }
-
-    /* สไตล์สำหรับช่อง input ทั่วไป, select , และ textarea */
-    input[type="text"],
-    input[type="email"],
-    input[type="password"],
-    input[type="number"],
-    input[type="date"],
-    select,
-    textarea {
-        width: 100%;
-        padding: 12px;
-        border: 1px solid#ccc;
-        border-radius: 6px; /* ขอบมนเล็กน้อย */
-        box-sizing: border-box; /* สำคัญเพื่อให้ padding ไม่ขยายความกว้าง */
-        transition: border-color 0.3s;
-        font-size: 16px;
-    }
-
-    input[type="text"]:focus,
-    input[type="email"]:focus,
-    input[type="password"]:focus,
-    textarea:focus{
-        border-color: #1a73e8; /* เปลี่ยนสีขอบเมื่อ Focus */
-        outline: none;
-        box-shadow: 0 0 5px rgba(26, 115, 232, 0.2);
-    }
-
-    /* สไตล์สำหรับ radio และ checkbox group */
-    .radio-group, .checkbox-group {
-        display: flex;
-        gap: 20px;
-        margin-top: 10px;
-    }
-
-    .btn{
-        padding: 10px 20px;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        font-size: 16px;
-        font-weight: bold;
-        transition: background-color 0.3s, opacity 0.3s;
-        margin-left: 10px;
-    }
-
-    .submit-btn {
-        background-color: #1a6bd5;
-        color: white;        
-    }
-
-    .btn {
-        background-color: #1a6bd5;
-        color: white;        
-    }
-
-    .btn:hover {
-        background-color: #0a26a5;
-    }
+    text-align: center;
+    color: #555;
+    margin-bottom: 25px;
+}
+ /*การจัดกลุ่มด้วย fieldset และ legend*/
+fieldset{
+    border: 1px solid#ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+}   
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    pad: 0 10px;
+}
+/*การจัดกลุ่มสำหรับแต่ละชุดข้อมูล*/
+.font-group{
+    margin-bottom: 15px;
+}
+/*สไตล์สำหรับ label*/
+label{
+    display: block;/*ทำให้ label ขึ้นบรรทัดใหม่*/
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #333;
+}
+/*สไตล์สำหรับช่อง input ทั่วไป,srlect และ textarea*/
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+select,
+textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid#ccc;
+    border-radius: 6px; /*ขอบมนเล็กน้อย*/
+    box-sizing: border-box; /*สำคัญเพื่อให้ padding ไม่ขยายความ*/
+    transition: border-color 0.3s;
+    font-size: 16px;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+    border-color: #1a73e8; /*เปลี่ยนสีขอบเมื่อ focus*/
+    outline: none;
+    box-shadow: 0 0 5px rgba(26,115,232,0.2);
+}
+/*สไตล์เฉพาะสำหรับ radio และ checkbox group*/
+.radio-group, .checkbox-group{
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+.btn{
+    padding: 10px 20px;
+    border:none ;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, opacity 0.3s;
+    margin-left: 10px;
+}
+/*ปุ่ม Submit*/
+.submit-btn{
+    background-color: #1a73e8;
+    color: white;
+}
+/*ปุ่ม Submit  และ Reset*/
+.btn{
+    background-color: #1a73e8;
+    color: white;
+}
+.btn:hover{
+    background-color: #0a26a5;/*สีเข้มขึ้นเมื่อชี้เมาส์*/
+}
 </style>
 </head>
 <body>
 
-    <form action="#" method="post" class="main-form">
-        <h1>แบบฟอร์มการลงทะเบียนและรับข้อเสนอแนะ</h1>
+    <form action="#" method="post" class="main-form" >
+        <h1>แบบฟอร์มลงทะเบียนและรับข้อเสนอแนะ</h1>
         <p>กรุณากรอกข้อมูลและแสดงความคิดเห็นของคุณ</p>
         <fieldset>
             <legend>ข้อมูลส่วนบุคคล</legend>
@@ -210,9 +194,9 @@
             </div>
         </fieldset>
 
-        <div align="center">
-            <button type="submit" class="btn" >ส่งข้อมูล (Submit)</button>
-            <button type="reset" class="btn">ล้างข้อมูล (Reset)</button>
+        <div >
+            <button type="submit">ส่งข้อมูล (Submit)</button>
+            <button type="reset" >ล้างข้อมูล (Reset)</button>
         </div>
 
     </form>
